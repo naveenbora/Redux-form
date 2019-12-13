@@ -3,4 +3,8 @@ export const IsFocusedFname = 'IsFocusedFname';
 export const IsFocusedLname = 'IsFocusedLname';
 export const IsTouchedLname = 'IsTouchedLname';
 export const Submit='Submit';
-
+export const IsTouchedFname2 = 'IsTouchedFname2';
+export const IsFocusedFname2 = 'IsFocusedFname2';
+export const IsFocusedLname2 = 'IsFocusedLname2';
+export const IsTouchedLname2 = 'IsTouchedLname2';
+export const Submit2='Submit2';

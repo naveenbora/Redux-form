@@ -8,10 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { NgReduxModule } from '@angular-redux/store';
 import { NgRedux, DevToolsExtension } from '@angular-redux/store';
 import { rootReducer, IAppState } from './store/index';
+import { Form2Component } from './form2/form2.component';
 
 @NgModule({
   imports: [ NgReduxModule, BrowserModule, FormsModule, HttpModule ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, Form2Component ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {
