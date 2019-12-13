@@ -25,12 +25,21 @@ export class AppComponent {
     
     this.ngRedux.dispatch({ type: Submit,payload:{ fname:this.fname,lname:this.lname}});
   }
-  IsFocusedLname() {
+  
+  fnamefocused(){
+    this.ngRedux.dispatch({ type: IsFocusedFname,payload:true });
+    this.ngRedux.dispatch({ type: IsTouchedFname,payload:true });
+    
+  }
+  fnamefocusedout(){
+    
+    this.ngRedux.dispatch({ type: IsFocusedFname,payload:false });
+  }
+  lnamefocused(){
+    this.ngRedux.dispatch({ type: IsTouchedLname,payload:true });
     this.ngRedux.dispatch({ type: IsFocusedLname,payload:true });
   }
-  Isfnametouched(){
-    
-    this.ngRedux.dispatch({ type: IsTouchedFname,payload:true });
+  lnamefocusedout(){
+    this.ngRedux.dispatch({ type: IsFocusedLname,payload:false });
   }
-  
 }

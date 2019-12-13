@@ -2,19 +2,19 @@ import { IsFocusedLname,IsTouchedLname,Submit,IsFocusedFname,IsTouchedFname} fro
 
 
 export class InputBox{
-    Istouched:boolean;
+    IsTouched:boolean;
     IsFocused:boolean;
     value:string
 
 }
 var fname:InputBox={
-  Istouched:false,
+  IsTouched:false,
   IsFocused:false,
   value:""
 
 };
 var lname:InputBox={
-  Istouched:false,
+  IsTouched:false,
   IsFocused:false,
   value:""
 
@@ -32,28 +32,29 @@ export function CounterReducer(state = IntialState, action: any): any {
         state.fname.value=action.payload.fname;
         state.lname.value=action.payload.lname;
         console.log(state);
-        break;
+        return state;
       case 'IsFocusedLname':
-          state.lname=action.payload;
-          console.log(state);
-        break;
+        state.lname.IsFocused=action.payload;
+        
+        return state;
       case 'IsFocusedFname':
-          state.fname=action.payload;
-          console.log(state);
-        break;
+        
+        state.fname.IsFocused=action.payload;
+        
+        return state;
       case 'IsTouchedLname':
-          state.lname=action.payload;
-          console.log(state);
-        break;
-      case 'IsTochedfname':
-          state.lname=action.payload;
-          console.log(state);
-        break;
+        state.lname.IsTouched=action.payload;
+        
+        return state;
+      case 'IsTouchedFname':
+        state.fname.IsTouched=action.payload;
+        
+        return state;
 
       default:
-        break;
+        return state;
     }
-    return state;
+    
  
 }
 
